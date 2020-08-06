@@ -34,6 +34,7 @@ section{
     align-items: center;
     justify-content: space-around;
     transition: opacity 0.5s ease;
+    
 }
 
 .intro h1{

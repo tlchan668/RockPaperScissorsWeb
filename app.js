@@ -21,6 +21,7 @@ const game =()=>{
      const computerHand = document.querySelector(".computer-hand");
      //Computer options
      //randomly generated # between 0, 1, 2 and associate to r,p,s
+     //9/11/20
      const computerOptions= ['rock', 'paper', 'scissors'];
 
      //get button clicked

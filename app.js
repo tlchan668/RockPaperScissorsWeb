@@ -32,8 +32,55 @@ const game =()=>{
              const computerNumber = Math.floor(Math.random() * 3);
              const computerChoice = computerOptions[computerNumber];
              console.log("Computer choice: " + computerChoice);
+             //create comparison option to see who wins pass to compareHands and call compareHands
+             
+             
+             //change image based on what user picks and computer picks==Update Images
+             playerHand.src = `./assets/${this.textContent}.png`;
+             computerHand.src = `./assets/${computerChoice}.png`;
+             //correct hand assets!!!!!!!
+             
          });
      });
+
+     const compareHands = (playerChoice, computerChoice) =>{
+        //update Text
+        const winner = document.querySelector('.winner');
+        if(playerChoice === computerChoice){
+            winner.textContent = 'It is a tie!';
+            return;
+        }
+        //check for rock
+        if(playerChoice === 'rock'){
+            if(computerChoice === 'scissors'){
+                winner.textContent = 'Player Wins';
+                return;
+            }else{
+                winner.textContent = 'Computer Wins';
+                return;
+            }
+        }
+        //check for paper
+        if(playerChoice === 'paper'){
+            if(computerChoice === 'scissors'){
+                winner.textContent = 'Computer Wins';
+                return;
+            }else{
+                winner.textContent = 'Player Wins';
+                return;
+            }
+        }
+        //check for scissors
+        if(playerChoice === 'scissors'){
+            if(computerChoice === 'paper'){
+                winner.textContent = 'Player Wins';
+                return;
+            }else{
+                winner.textContent = 'Computer Wins';
+                return;
+            }
+        }
+     }
      
      
  } 

@@ -34,11 +34,13 @@ const game =()=>{
              console.log("Computer choice: " + computerChoice);
              //create comparison option to see who wins pass to compareHands and call compareHands
              
+             compareHands(this.textContent, computerChoice);
              
              //change image based on what user picks and computer picks==Update Images
              playerHand.src = `./assets/${this.textContent}.png`;
              computerHand.src = `./assets/${computerChoice}.png`;
              //correct hand assets!!!!!!!
+
              
          });
      });

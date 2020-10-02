@@ -39,7 +39,7 @@ const game =()=>{
              //change image based on what user picks and computer picks==Update Images
              playerHand.src = `./assets/${this.textContent}.png`;
              computerHand.src = `./assets/${computerChoice}.png`;
-             //correct hand assets!!!!!!!
+             //correct hand assets!!!!!!
 
              
          });

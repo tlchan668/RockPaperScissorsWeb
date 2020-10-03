@@ -45,6 +45,14 @@ const game =()=>{
          });
      });
 
+     //update score
+     const updateScore = () =>{
+         const playerScore = document.querySelector('.player-score p');
+         const ComputerScore = document.querySelector('.computer-score p');
+         playerScore.textContent = pScore;
+         ComputerScore.textContent = cScore;
+     }
+
      const compareHands = (playerChoice, computerChoice) =>{
         //update Text
         const winner = document.querySelector('.winner');
@@ -56,9 +64,13 @@ const game =()=>{
         if(playerChoice === 'rock'){
             if(computerChoice === 'scissors'){
                 winner.textContent = 'Player Wins';
+                pScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Computer Wins';
+                cScore++;
+                updateScore();
                 return;
             }
         }
@@ -66,9 +78,13 @@ const game =()=>{
         if(playerChoice === 'paper'){
             if(computerChoice === 'scissors'){
                 winner.textContent = 'Computer Wins';
+                cScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Player Wins';
+                pScore++;
+                updateScore();
                 return;
             }
         }
@@ -76,9 +92,13 @@ const game =()=>{
         if(playerChoice === 'scissors'){
             if(computerChoice === 'paper'){
                 winner.textContent = 'Player Wins';
+                pScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Computer Wins';
+                cScore++;
+                updateScore();
                 return;
             }
         }

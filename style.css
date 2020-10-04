@@ -83,6 +83,7 @@ div.fadeIn{
    pointer-events: all; /*can click on buttons*/
 }
 
+/*animation*/
 @keyframes shakePlayer{
     0%{
         transform: rotateY(180deg) translateY(0px);

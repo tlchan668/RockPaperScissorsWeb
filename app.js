@@ -19,6 +19,13 @@ const game =()=>{
      const options = document.querySelectorAll('.options button');
      const playerHand =document.querySelector(".player-hand");
      const computerHand = document.querySelector(".computer-hand");
+     const hands = document.querySelectorAll('.hands img');
+ 
+     hands.forEach(hand =>{
+         hand.addEventListener('animationend', function(){
+             this.style.animation = '';
+         })
+     })
      //Computer options
      //randomly generated # between 0, 1, 2 and associate to r,p,s
      //9/11/20
@@ -32,16 +39,21 @@ const game =()=>{
              const computerNumber = Math.floor(Math.random() * 3);
              const computerChoice = computerOptions[computerNumber];
              console.log("Computer choice: " + computerChoice);
-             //create comparison option to see who wins pass to compareHands and call compareHands
              
-             compareHands(this.textContent, computerChoice);
+             setTimeout(() => {
+                 //create comparison option to see who wins pass to compareHands and call compareHands
+                //do action of shake and update at end
+                compareHands(this.textContent, computerChoice);
              
-             //change image based on what user picks and computer picks==Update Images
-             playerHand.src = `./assets/${this.textContent}.png`;
-             computerHand.src = `./assets/${computerChoice}.png`;
-             //correct hand assets!!!!!!
+                //change image based on what user picks and computer picks==Update Images
+                playerHand.src = `./assets/${this.textContent}.png`;
+                computerHand.src = `./assets/${computerChoice}.png`;
+                //correct hand assets!!!!!!
+             }, 2000);
 
-             
+             //Animation
+             playerHand.style.animation = "shakePlayer 2s ease";
+             computerHand.style.animation = "shakeComputer 2s ease";
          });
      });
 

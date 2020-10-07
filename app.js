@@ -75,12 +75,12 @@ const game =()=>{
         //check for rock
         if(playerChoice === 'rock'){
             if(computerChoice === 'scissors'){
-                winner.textContent = 'Player Wins';
+                winner.textContent = 'Player Wins!';
                 pScore++;
                 updateScore();
                 return;
             }else{
-                winner.textContent = 'Computer Wins';
+                winner.textContent = 'Computer Wins!';
                 cScore++;
                 updateScore();
                 return;

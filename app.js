@@ -54,6 +54,7 @@ const game =()=>{
              //Animation
              playerHand.style.animation = "shakePlayer 2s ease";
              computerHand.style.animation = "shakeComputer 2s ease";
+
          });
      });
 
@@ -89,12 +90,12 @@ const game =()=>{
         //check for paper
         if(playerChoice === 'paper'){
             if(computerChoice === 'scissors'){
-                winner.textContent = 'Computer Wins';
+                winner.textContent = 'Computer Wins!';
                 cScore++;
                 updateScore();
                 return;
             }else{
-                winner.textContent = 'Player Wins';
+                winner.textContent = 'Player Wins!';
                 pScore++;
                 updateScore();
                 return;
@@ -103,12 +104,12 @@ const game =()=>{
         //check for scissors
         if(playerChoice === 'scissors'){
             if(computerChoice === 'paper'){
-                winner.textContent = 'Player Wins';
+                winner.textContent = 'Player Wins!';
                 pScore++;
                 updateScore();
                 return;
             }else{
-                winner.textContent = 'Computer Wins';
+                winner.textContent = 'Computer Wins!';
                 cScore++;
                 updateScore();
                 return;

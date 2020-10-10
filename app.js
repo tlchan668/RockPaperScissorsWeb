@@ -1,7 +1,7 @@
 const game =()=>{
     let pScore = 0;
     let cScore = 0;
-
+//I deleted the branch in github.  what happens when I try to do another commit and push?
     //start game function to fadein an
     const startGame = () => {
         const playBtn = document.querySelector(".intro button");

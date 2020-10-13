@@ -29,6 +29,7 @@ const game =()=>{
      //Computer options
      //randomly generated # between 0, 1, 2 and associate to r,p,s
      //9/11/20
+     //step through it?
      const computerOptions= ['rock', 'paper', 'scissors'];
 
      //get button clicked
@@ -119,7 +120,7 @@ const game =()=>{
      
      
  } 
-//call the innder functions
+//call the inner functions
 startGame();
 playMatch();
 //updateScore();

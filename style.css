@@ -57,6 +57,7 @@ section{
     left: 50%;
     transform: translate(-50%, -50%); 
     transition: opacity 0.5s ease 0.5s ;
+
 }
 .winner{
     color: rgb(224, 224, 224);
@@ -68,11 +69,14 @@ section{
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
 }
 
 .player-hand{
     transform: rotateY(180deg);
+    
 }
+
 /* to  fade out */
 div.fadeOut{
     opacity: 0;

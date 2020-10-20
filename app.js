@@ -35,6 +35,9 @@ const game =()=>{
      //get button clicked
      options.forEach(option=>{
          option.addEventListener("click", function(){
+             //on each click want the hands to go back to rock to shake
+             playerHand.src = `./assets/rock.png`;
+             computerHand.src = './assets/rock.png';
              console.log(this);
              //computer choice 
              const computerNumber = Math.floor(Math.random() * 3);
